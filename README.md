@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/cover.png" alt="DoseNote — Medication reminders for iPhone and Apple Watch" width="100%" />
+</p>
+
 # DoseNote
 
 A calm, focused medication reminder app for **iPhone** and **Apple Watch**, built natively with SwiftUI, `UserNotifications`, and `WatchConnectivity`.
