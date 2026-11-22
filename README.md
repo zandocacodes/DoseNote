@@ -9,7 +9,8 @@ A calm, focused medication reminder app for **iPhone** and **Apple Watch**, buil
 DoseNote centers on one daily screen (`Today`) that answers a single question at a glance: *do I need to take a medication right now, or have I already taken it?*
 
 **Platforms:** iOS 17.0+ · watchOS 10.0+  
-**Stack:** Swift 5 · SwiftUI · Combine · UserNotifications · WatchConnectivity · XCTest
+**Stack:** Swift 5 · SwiftUI · Combine · UserNotifications · WatchConnectivity · XCTest  
+**Case Study:** [Design & Engineering Decisions on Medium (PT-BR)](https://medium.com/@zandocacodes/dosenote-decis%C3%B5es-de-design-e-engenharia-em-um-app-de-medica%C3%A7%C3%A3o-para-iphone-e-apple-watch-0da196858e7d)
 
 ---
 
