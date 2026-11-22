@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0E450B760CEE7DEE1D34077 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC8882B662E0E6AE57F8FAB /* Frequency.swift */; };
+		93C37BBA8BB16034A1EB8EBF /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC8882B662E0E6AE57F8FAB /* Frequency.swift */; };
+		B48996FAB411D7A17AD0B447 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D563E7BD1002E48476C99 /* Reminder.swift */; };
+		2EBB0AD262F9F0008907722E /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D563E7BD1002E48476C99 /* Reminder.swift */; };
+		CFDF5C11E2372CDDE26EA5D1 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BBB9F64FEEBFF1E032ACA /* Dose.swift */; };
+		13D256FAA7AF99E5A37F7178 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BBB9F64FEEBFF1E032ACA /* Dose.swift */; };
+		9D3BFA03D003320ACC4026FC /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91117826C41FBF584240E0BC /* Schedule.swift */; };
+		FDF67A03A9D7BB6FA6D1CCB9 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91117826C41FBF584240E0BC /* Schedule.swift */; };
+		8395DC6DD4214298917E37B3 /* WatchSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0B69FFA044A9075382700 /* WatchSnapshot.swift */; };
+		5804AA4F95AF35F731372A58 /* WatchSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0B69FFA044A9075382700 /* WatchSnapshot.swift */; };
+		B0149A237D3828E7F9B20577 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F53F24035A8E99CDCC03D9 /* Colors.xcassets */; };
+		76D90EE514095BD12B8F9FBB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F53F24035A8E99CDCC03D9 /* Colors.xcassets */; };
+		1D64D19F77ECBC6AFACEA6D7 /* DoseNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7729FDF7EABA646D554406A /* DoseNoteApp.swift */; };
+		13DD0DCD0FF1D6B9B9C72CD2 /* DosePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE8DC4C8553B8DF5CF40689 /* DosePage.swift */; };
+		92AAA9BCF1ADDDF45F164562 /* PageHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65CE844F4CB661760D261C8 /* PageHeading.swift */; };
+		0A92696F4D81F68FFE4CD5B6 /* DoseButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD743B5F079E55276E0E0FD4 /* DoseButtonStyles.swift */; };
+		29068081E8D8DBA55B8C1CBB /* DoseFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE166E39F48F926CD13C9B4 /* DoseFieldModifier.swift */; };
+		78A5CD4485B9015B0E5D1702 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB736C32BE96DA100B22D0E3 /* ReminderStore.swift */; };
+		1705B4FCD3EEF248F65319AA /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103D56D9D444D968DAD00EE /* SampleData.swift */; };
+		1B3E2BFD8910F7123254CFE3 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CCF61FE2CADCCB65DD8266 /* NotificationScheduler.swift */; };
+		1D078BF417CEBC97A5382EE7 /* PhoneBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E424F8E6163A7ADFBEA49F /* PhoneBridge.swift */; };
+		BB921CC793B4012CFB3878BE /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A630E18DAE5C67A60AE22A4 /* TodayView.swift */; };
+		F03414DE731698DFE69D3E62 /* DoseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4D8AFA96F3E5761CC417BF /* DoseCard.swift */; };
+		B6BAB4CE380E21EE4F232FD0 /* ReminderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D84B5569883CB577F68B20C /* ReminderListView.swift */; };
+		9D60528C63BFFCB1141A31EC /* ReminderFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11C4E4FE2C1B10E70F9E18 /* ReminderFormView.swift */; };
+		5D11E0B4868ADE76703128BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C860C78AFB88278F52F0F8A /* Assets.xcassets */; };
+		7E9F9876626CB9872E0038CF /* DoseNoteWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC4D35C2CD28D38E0E0D252 /* DoseNoteWatchApp.swift */; };
+		4FF2677748C1E9F5094C6F16 /* WatchStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B0D605BBF62B93EFF05018 /* WatchStore.swift */; };
+		A9160BD6714C09A3098A4420 /* WatchTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE2535B72F0F0FEE763EB24 /* WatchTodayView.swift */; };
+		A8E88EE2428338DA5A5CB096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45C16D97B8F8B6025476645 /* Assets.xcassets */; };
+		ED076848EA112E2E5B2DF281 /* ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB59A43E0395EDB170FBA8E /* ScheduleTests.swift */; };
+		A787032CAFA6B5A05589A04F /* DoseNoteWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CE3FE4FA616666C1C1086644 /* DoseNoteWatch.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E71052AB3031CE3AA2FE0CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040B6A19EE03DB489C0870F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B77DEA9350ABBEA5795057;
+			remoteInfo = DoseNoteWatch;
+		};
+		CF3736DC75594E73AD92845B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 040B6A19EE03DB489C0870F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DCFCBEDA22464300ADC4AA7;
+			remoteInfo = DoseNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4E5C6604A74DC3FBA6AC29F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A787032CAFA6B5A05589A04F /* DoseNoteWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5CA174D2B1346B464672C0E4 /* DoseNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoseNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3FE4FA616666C1C1086644 /* DoseNoteWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoseNoteWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59FD7EE6EF356250CEEB77C /* DoseNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoseNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC8882B662E0E6AE57F8FAB /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
+		632D563E7BD1002E48476C99 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		383BBB9F64FEEBFF1E032ACA /* Dose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
+		91117826C41FBF584240E0BC /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		D8E0B69FFA044A9075382700 /* WatchSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSnapshot.swift; sourceTree = "<group>"; };
+		D4F53F24035A8E99CDCC03D9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A7729FDF7EABA646D554406A /* DoseNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseNoteApp.swift; sourceTree = "<group>"; };
+		DEE8DC4C8553B8DF5CF40689 /* DosePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosePage.swift; sourceTree = "<group>"; };
+		F65CE844F4CB661760D261C8 /* PageHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageHeading.swift; sourceTree = "<group>"; };
+		FD743B5F079E55276E0E0FD4 /* DoseButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseButtonStyles.swift; sourceTree = "<group>"; };
+		EBE166E39F48F926CD13C9B4 /* DoseFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseFieldModifier.swift; sourceTree = "<group>"; };
+		EB736C32BE96DA100B22D0E3 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		E103D56D9D444D968DAD00EE /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		09CCF61FE2CADCCB65DD8266 /* NotificationScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
+		F6E424F8E6163A7ADFBEA49F /* PhoneBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBridge.swift; sourceTree = "<group>"; };
+		8A630E18DAE5C67A60AE22A4 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		5A4D8AFA96F3E5761CC417BF /* DoseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseCard.swift; sourceTree = "<group>"; };
+		6D84B5569883CB577F68B20C /* ReminderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListView.swift; sourceTree = "<group>"; };
+		FA11C4E4FE2C1B10E70F9E18 /* ReminderFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderFormView.swift; sourceTree = "<group>"; };
+		0C860C78AFB88278F52F0F8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FC4D35C2CD28D38E0E0D252 /* DoseNoteWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseNoteWatchApp.swift; sourceTree = "<group>"; };
+		69B0D605BBF62B93EFF05018 /* WatchStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStore.swift; sourceTree = "<group>"; };
+		0AE2535B72F0F0FEE763EB24 /* WatchTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTodayView.swift; sourceTree = "<group>"; };
+		D45C16D97B8F8B6025476645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DB59A43E0395EDB170FBA8E /* ScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E673C989AA6EF61BF16F9826 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9B4AA65958C3394BB175312 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0D62127FA6F0D3129536297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		703D37BE981958338680FCB2 = {
+			isa = PBXGroup;
+			children = (
+				63F300321864CF3950D7EF04 /* Shared */,
+				7F8B07439CFF95337749904B /* DoseNote */,
+				9620C8ABC49D30871B666FB5 /* Watch */,
+				D40FA1C0429085F7875BB56B /* DoseNoteTests */,
+				5E339F005EBF0892CD4E81A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E339F005EBF0892CD4E81A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CA174D2B1346B464672C0E4 /* DoseNote.app */,
+				CE3FE4FA616666C1C1086644 /* DoseNoteWatch.app */,
+				C59FD7EE6EF356250CEEB77C /* DoseNoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63F300321864CF3950D7EF04 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B23BD770C8932A0A8E9C6DCF /* Models */,
+				3103ECEAAD0CF3D34422511F /* Resources */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B23BD770C8932A0A8E9C6DCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2FC8882B662E0E6AE57F8FAB /* Frequency.swift */,
+				632D563E7BD1002E48476C99 /* Reminder.swift */,
+				383BBB9F64FEEBFF1E032ACA /* Dose.swift */,
+				91117826C41FBF584240E0BC /* Schedule.swift */,
+				D8E0B69FFA044A9075382700 /* WatchSnapshot.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3103ECEAAD0CF3D34422511F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4F53F24035A8E99CDCC03D9 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7F8B07439CFF95337749904B /* DoseNote */ = {
+			isa = PBXGroup;
+			children = (
+				2A7F75E3B7503560A74E9635 /* App */,
+				9955EE7D205482E3089106E0 /* DesignSystem */,
+				2F7EA56A7E894ADEB94D3E10 /* Store */,
+				EE4F13EDA6103C491D1B033A /* Services */,
+				CF7859AD6E4DDD1BEF004485 /* Features */,
+				0C860C78AFB88278F52F0F8A /* Assets.xcassets */,
+			);
+			path = DoseNote;
+			sourceTree = "<group>";
+		};
+		2A7F75E3B7503560A74E9635 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A7729FDF7EABA646D554406A /* DoseNoteApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9955EE7D205482E3089106E0 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				DEE8DC4C8553B8DF5CF40689 /* DosePage.swift */,
+				F65CE844F4CB661760D261C8 /* PageHeading.swift */,
+				FD743B5F079E55276E0E0FD4 /* DoseButtonStyles.swift */,
+				EBE166E39F48F926CD13C9B4 /* DoseFieldModifier.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		2F7EA56A7E894ADEB94D3E10 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				EB736C32BE96DA100B22D0E3 /* ReminderStore.swift */,
+				E103D56D9D444D968DAD00EE /* SampleData.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		EE4F13EDA6103C491D1B033A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				09CCF61FE2CADCCB65DD8266 /* NotificationScheduler.swift */,
+				F6E424F8E6163A7ADFBEA49F /* PhoneBridge.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CF7859AD6E4DDD1BEF004485 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3E99CDCDDC4B2CF71A43AD25 /* Today */,
+				C43AD390AE3BE0DEE6B778C1 /* Reminders */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3E99CDCDDC4B2CF71A43AD25 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				8A630E18DAE5C67A60AE22A4 /* TodayView.swift */,
+				5A4D8AFA96F3E5761CC417BF /* DoseCard.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		C43AD390AE3BE0DEE6B778C1 /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				6D84B5569883CB577F68B20C /* ReminderListView.swift */,
+				FA11C4E4FE2C1B10E70F9E18 /* ReminderFormView.swift */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		9620C8ABC49D30871B666FB5 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				0FC4D35C2CD28D38E0E0D252 /* DoseNoteWatchApp.swift */,
+				69B0D605BBF62B93EFF05018 /* WatchStore.swift */,
+				0AE2535B72F0F0FEE763EB24 /* WatchTodayView.swift */,
+				D45C16D97B8F8B6025476645 /* Assets.xcassets */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		D40FA1C0429085F7875BB56B /* DoseNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DB59A43E0395EDB170FBA8E /* ScheduleTests.swift */,
+			);
+			path = DoseNoteTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DCFCBEDA22464300ADC4AA7 /* DoseNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8ED883AE1E00EC47A205AD3 /* Build configuration list for PBXNativeTarget "DoseNote" */;
+			buildPhases = (
+				8555EBEA26157589899E6343 /* Sources */,
+				E673C989AA6EF61BF16F9826 /* Frameworks */,
+				C3188932CC117AA011E667BD /* Resources */,
+				D4E5C6604A74DC3FBA6AC29F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				751606E17717DADE34F45F7E /* PBXTargetDependency */,
+			);
+			name = DoseNote;
+			productName = DoseNote;
+			productReference = 5CA174D2B1346B464672C0E4 /* DoseNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42B77DEA9350ABBEA5795057 /* DoseNoteWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36025D478E68F8D1011AE6E3 /* Build configuration list for PBXNativeTarget "DoseNoteWatch" */;
+			buildPhases = (
+				61AB0644AE0FABB761F9E841 /* Sources */,
+				F9B4AA65958C3394BB175312 /* Frameworks */,
+				2096F9506D18B91920CE62EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoseNoteWatch;
+			productName = DoseNoteWatch;
+			productReference = CE3FE4FA616666C1C1086644 /* DoseNoteWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AB53B85D4211C337B58860A /* DoseNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A4204ED6AFB2F8EDBEE9BD2 /* Build configuration list for PBXNativeTarget "DoseNoteTests" */;
+			buildPhases = (
+				C54C0B8B1278673F76ECACAD /* Sources */,
+				C0D62127FA6F0D3129536297 /* Frameworks */,
+				50CBE698AEA07EE44254851A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5A370566DDAD7704FCFC509 /* PBXTargetDependency */,
+			);
+			name = DoseNoteTests;
+			productName = DoseNoteTests;
+			productReference = C59FD7EE6EF356250CEEB77C /* DoseNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		040B6A19EE03DB489C0870F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					8AB53B85D4211C337B58860A = {
+						TestTargetID = 2DCFCBEDA22464300ADC4AA7;
+					};
+				};
+			};
+			buildConfigurationList = DA0911ADC4FB0D0362E4BE90 /* Build configuration list for PBXProject "DoseNote" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 703D37BE981958338680FCB2;
+			productRefGroup = 5E339F005EBF0892CD4E81A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DCFCBEDA22464300ADC4AA7 /* DoseNote */,
+				42B77DEA9350ABBEA5795057 /* DoseNoteWatch */,
+				8AB53B85D4211C337B58860A /* DoseNoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3188932CC117AA011E667BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0149A237D3828E7F9B20577 /* Colors.xcassets in Resources */,
+				5D11E0B4868ADE76703128BA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2096F9506D18B91920CE62EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76D90EE514095BD12B8F9FBB /* Colors.xcassets in Resources */,
+				A8E88EE2428338DA5A5CB096 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50CBE698AEA07EE44254851A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8555EBEA26157589899E6343 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0E450B760CEE7DEE1D34077 /* Frequency.swift in Sources */,
+				B48996FAB411D7A17AD0B447 /* Reminder.swift in Sources */,
+				CFDF5C11E2372CDDE26EA5D1 /* Dose.swift in Sources */,
+				9D3BFA03D003320ACC4026FC /* Schedule.swift in Sources */,
+				8395DC6DD4214298917E37B3 /* WatchSnapshot.swift in Sources */,
+				1D64D19F77ECBC6AFACEA6D7 /* DoseNoteApp.swift in Sources */,
+				13DD0DCD0FF1D6B9B9C72CD2 /* DosePage.swift in Sources */,
+				92AAA9BCF1ADDDF45F164562 /* PageHeading.swift in Sources */,
+				0A92696F4D81F68FFE4CD5B6 /* DoseButtonStyles.swift in Sources */,
+				29068081E8D8DBA55B8C1CBB /* DoseFieldModifier.swift in Sources */,
+				78A5CD4485B9015B0E5D1702 /* ReminderStore.swift in Sources */,
+				1705B4FCD3EEF248F65319AA /* SampleData.swift in Sources */,
+				1B3E2BFD8910F7123254CFE3 /* NotificationScheduler.swift in Sources */,
+				1D078BF417CEBC97A5382EE7 /* PhoneBridge.swift in Sources */,
+				BB921CC793B4012CFB3878BE /* TodayView.swift in Sources */,
+				F03414DE731698DFE69D3E62 /* DoseCard.swift in Sources */,
+				B6BAB4CE380E21EE4F232FD0 /* ReminderListView.swift in Sources */,
+				9D60528C63BFFCB1141A31EC /* ReminderFormView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61AB0644AE0FABB761F9E841 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93C37BBA8BB16034A1EB8EBF /* Frequency.swift in Sources */,
+				2EBB0AD262F9F0008907722E /* Reminder.swift in Sources */,
+				13D256FAA7AF99E5A37F7178 /* Dose.swift in Sources */,
+				FDF67A03A9D7BB6FA6D1CCB9 /* Schedule.swift in Sources */,
+				5804AA4F95AF35F731372A58 /* WatchSnapshot.swift in Sources */,
+				7E9F9876626CB9872E0038CF /* DoseNoteWatchApp.swift in Sources */,
+				4FF2677748C1E9F5094C6F16 /* WatchStore.swift in Sources */,
+				A9160BD6714C09A3098A4420 /* WatchTodayView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54C0B8B1278673F76ECACAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED076848EA112E2E5B2DF281 /* ScheduleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		751606E17717DADE34F45F7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42B77DEA9350ABBEA5795057 /* DoseNoteWatch */;
+			targetProxy = 8E71052AB3031CE3AA2FE0CA /* PBXContainerItemProxy */;
+		};
+		E5A370566DDAD7704FCFC509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DCFCBEDA22464300ADC4AA7 /* DoseNote */;
+			targetProxy = CF3736DC75594E73AD92845B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		57534BCC1CCC1D748FDEF56E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		581FB80A690D1FB889617860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		81D136076307C4E36CF6B007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zandocacodes.DoseNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0AFDBA1BEE251A7F67A6D880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zandocacodes.DoseNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2DBB00A14ACD81460F73F026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DoseNote;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.zandocacodes.DoseNote;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zandocacodes.DoseNote.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		2C3A072576A9ADB821EBC743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DoseNote;
+				INFOPLIST_KEY_WKApplication = YES;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.zandocacodes.DoseNote;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zandocacodes.DoseNote.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		A23E872215AC56F0100C7EC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zandocacodes.DoseNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoseNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DoseNote";
+			};
+			name = Debug;
+		};
+		276583B6F32B90A4D5059ABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zandocacodes.DoseNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoseNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DoseNote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA0911ADC4FB0D0362E4BE90 /* Build configuration list for PBXProject "DoseNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57534BCC1CCC1D748FDEF56E /* Debug */,
+				581FB80A690D1FB889617860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8ED883AE1E00EC47A205AD3 /* Build configuration list for PBXNativeTarget "DoseNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81D136076307C4E36CF6B007 /* Debug */,
+				0AFDBA1BEE251A7F67A6D880 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36025D478E68F8D1011AE6E3 /* Build configuration list for PBXNativeTarget "DoseNoteWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DBB00A14ACD81460F73F026 /* Debug */,
+				2C3A072576A9ADB821EBC743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A4204ED6AFB2F8EDBEE9BD2 /* Build configuration list for PBXNativeTarget "DoseNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A23E872215AC56F0100C7EC5 /* Debug */,
+				276583B6F32B90A4D5059ABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 040B6A19EE03DB489C0870F4 /* Project object */;
+}
