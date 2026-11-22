@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/cover.png" alt="DoseNote — Medication reminders for iPhone and Apple Watch" width="100%" />
+  <img src="docs/images/cover.jpg" alt="DoseNote — Medication reminders for iPhone and Apple Watch" width="100%" />
 </p>
 
 # DoseNote
