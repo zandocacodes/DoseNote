@@ -45,7 +45,7 @@ DoseNote centers on one daily screen (`Today`) that answers a single question at
 - **Semantic color system:** Shared across iPhone and Apple Watch (`Due` warm amber for pending doses, `Forest` green for confirmed intake, `Mint` for upcoming schedules and Watch actions).
 - **Companion Apple Watch app:** Displays the featured dose on the wrist and syncs intake confirmations directly with the iPhone via `WatchConnectivity`.
 - **Flexible schedules:** Supports daily, every 12 hours, and weekly reminders with per-reminder notification toggles and safe swipe-to-delete (`allowsFullSwipe: false`).
-- **Accessibility:** Dynamic Type scaling (`@ScaledMetric`), tabular numerals (`.monospacedDigit()`), VoiceOver header traits, and combined card semantics.
+- **Accessibility:** Dynamic Type scaling (`@ScaledMetric`), tabular numerals (`.monospacedDigit()`), VoiceOver header traits, combined card semantics, and layout stress-testing with realistic long medication names (such as *Metformin Extended-Release 500 mg*).
 
 ---
 
@@ -86,7 +86,7 @@ flowchart LR
 ```text
 DoseNote/
 ├── Shared/
-│   ├── Models/            # Pure value types: Frequency, Reminder, Dose, Schedule, WatchSnapshot
+│   ├── Models/            # Pure value types: Frequency, Reminder, Dose, DoseRecord, Schedule, WatchSnapshot
 │   └── Resources/         # Colors.xcassets compiled into both iOS and watchOS targets
 ├── DoseNote/
 │   ├── App/               # DoseNoteApp entry point and scenePhase refresh
@@ -106,9 +106,31 @@ DoseNote/
 ## Key Engineering Decisions
 
 - **Calendar-stable dose identifiers (`Dose.makeID`):** Dose IDs are built from local calendar components (`<reminderID>-YYYY-MM-DD-HH-mm`) rather than Unix timestamps (`timeIntervalSince1970`), preventing recorded doses from drifting across time zone changes or Daylight Saving Time transitions.
-- **Single source of truth for dose history (`DoseRecord`):** Recorded intakes store an immutable snapshot (`medicationName`, `scheduled`, `taken`) inside `Schedule.records`, eliminating duplicated state while preserving past logs if a reminder is later edited or deleted.
-- **iOS 64-notification guard & race-free reconciliation:** `ReminderStore` validates active alert slots against iOS's 64 pending local notification limit before committing, and `NotificationScheduler` reconciles `"dose."`-prefixed triggers idempotently using a monotonic `revision` counter.
-- **Dual-channel `WatchConnectivity`:** Uses `updateApplicationContext` to keep the latest `WatchSnapshot` available in the background and `sendMessage(_:replyHandler:)` for live dose confirmation, keeping the iPhone as the single source of truth.
+
+```swift
+static func makeID(
+    reminderID: UUID,
+    on day: Date,
+    hour: Int,
+    minute: Int,
+    calendar: Calendar = .current
+) -> String {
+    let components = calendar.dateComponents([.year, .month, .day], from: day)
+    return String(
+        format: "%@-%04d-%02d-%02d-%02d-%02d",
+        reminderID.uuidString,
+        components.year ?? 0,
+        components.month ?? 0,
+        components.day ?? 0,
+        hour,
+        minute
+    )
+}
+```
+
+- **Single source of truth for dose history (`DoseRecord`):** Recorded intakes store an immutable snapshot (`medicationName`, `scheduled`, `taken`) inside `Schedule.records`, eliminating duplicated state while preserving past logs if a reminder is later edited or deleted (with `swipeActions(allowsFullSwipe: false)` protecting against accidental deletion).
+- **iOS 64-notification guard & race-free reconciliation:** `ReminderStore` validates active alert slots against iOS's 64 pending local notification limit before committing (every-12-hour schedules consume 2 slots), and `NotificationScheduler` reconciles `"dose."`-prefixed triggers idempotently using a monotonic `revision` counter.
+- **Dual-channel `WatchConnectivity`:** Uses `updateApplicationContext` to keep the latest `WatchSnapshot` available in the background and `sendMessage(_:replyHandler:)` for live dose confirmation, keeping the iPhone as the single source of truth—with `@MainActor` isolation via Swift Concurrency (`Task { @MainActor in ... }`) inside `nonisolated` `WCSessionDelegate` callbacks.
 - **On-device privacy without unnecessary friction:** Schedules are written atomically to `Application Support` with `.completeFileProtection` (hardware-encrypted when locked), allowing the app to open straight into `Today` without an artificial splash delay or an offline account wall.
 
 ---
@@ -126,13 +148,22 @@ DoseNote/
 
 ### Run unit tests
 Press **`Cmd + U`** in Xcode to execute `DoseNoteTests/ScheduleTests.swift`.  
-All 7 unit tests inject a fixed UTC `Calendar` and cover:
-- First-day boundary handling for daily and every-12-hour schedules
+All 7 unit tests run in under 20 milliseconds using a fixed UTC Gregorian `Calendar` and cover:
+- First-day boundary handling for daily and every-12-hour schedules (blocking doses prior to `firstDay`, skipping passed slots on day one, and generating both slots on subsequent days)
 - Weekly weekday matching
-- `featured(at:keepingRecorded:)` priority rules
-- Time-zone stability of `Dose.makeID`
+- `featured(at:keepingRecorded:)` priority rules (keeping a newly recorded confirmation visible briefly to allow immediate *Undo*)
+- Time-zone stability of `Dose.makeID` (between UTC and UTC-3)
 - Active alert slot counting (including paused and 12-hour reminders)
 - `Schedule` `Codable` round-trip integrity
+
+---
+
+## What’s Next
+
+- **WidgetKit & Lock Screen support** to surface the next dose at a glance
+- **Offline confirmation queuing on Apple Watch** via `transferUserInfo`
+- **On-device contextual intelligence (`App Intents` & Apple Intelligence)** to enable natural voice/Siri dose logging and smart schedule nudges while keeping health data local
+- **String Catalog localization** for seamless English and Portuguese support
 
 ---
 
