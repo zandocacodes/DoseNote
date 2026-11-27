@@ -10,7 +10,7 @@ DoseNote centers on one daily screen (`Today`) that answers a single question at
 
 **Platforms:** iOS 17.0+ · watchOS 10.0+  
 **Stack:** Swift 5 · SwiftUI · Combine · UserNotifications · WatchConnectivity · XCTest  
-**Case Study:** [Design & Engineering Decisions on Medium (PT-BR)](https://medium.com/@zandocacodes/dosenote-decis%C3%B5es-de-design-e-engenharia-em-um-app-de-medica%C3%A7%C3%A3o-para-iphone-e-apple-watch-0da196858e7d)
+**Case Study:** [Design & Engineering Decisions on Medium](https://medium.com/@zandocacodes/dosenote-design-engineering-decisions-behind-a-medication-app-for-iphone-and-apple-watch-10e11d61df7d)
 
 ---
 
